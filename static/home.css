@@ -1,0 +1,127 @@
+/* ============================
+   GLOBAL
+============================ */
+body {
+    margin: 0;
+    font-family: Poppins, sans-serif;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* ============================
+   ANIMATED BACKGROUND
+============================ */
+.bg-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(-45deg, #0d0d0d, #111, #1a1a1a, #0c0c1f);
+    background-size: 400% 400%;
+    animation: gradientMove 8s ease infinite;
+    z-index: -1;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ============================
+   NAVBAR
+============================ */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 35px;
+    background: rgba(20, 20, 20, 0.4);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.nav-logo {
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.nav-link {
+    color: #ccc;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 15px;
+}
+
+.nav-link:hover {
+    color: #fff;
+}
+
+/* ============================
+   HERO SECTION
+============================ */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+    text-align: center;
+}
+
+/* Glassmorphic Card */
+.glass-card {
+    width: 60%;
+    padding: 40px;
+    background: rgba(255,255,255,0.06);
+    border-radius: 18px;
+    backdrop-filter: blur(14px);
+    border: 1px solid rgba(255,255,255,0.12);
+    box-shadow: 0 0 30px rgba(0, 128, 255, 0.2);
+    animation: fadeIn 1.4s ease;
+    color: white;
+}
+
+.title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 20px;
+    color: #89b5ff;
+    margin-bottom: 20px;
+}
+
+.desc {
+    font-size: 16px;
+    color: #d9d9d9;
+    margin-bottom: 35px;
+}
+
+/* ============================
+   BUTTON
+============================ */
+.start-btn {
+    padding: 14px 40px;
+    background: linear-gradient(90deg, #006eff, #00c3ff);
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    border-radius: 10px;
+    display: inline-block;
+    transition: 0.2s;
+    box-shadow: 0 0 12px rgba(0, 170, 255, 0.5);
+}
+
+.start-btn:hover {
+    transform: scale(1.07);
+    box-shadow: 0 0 20px rgba(0, 170, 255, 0.8);
+}
+
+/* Fade Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(25px); }
+    to { opacity: 1; transform: translateY(0); }
+}

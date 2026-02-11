@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction History</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<h1 class="main-title">Prediction History</h1>
+
+<div class="history-container">
+    <table class="history-table">
+        <tr>
+            <th>ID</th>
+            <th>Timestamp</th>
+            <th>Continent</th>
+            <th>Education</th>
+            <th>Experience</th>
+            <th>Training</th>
+            <th>Employees</th>
+            <th>Estab Year</th>
+            <th>Region</th>
+            <th>Wage</th>
+            <th>Unit</th>
+            <th>Fulltime</th>
+            <th>Company Age</th>
+            <th>Wage Category</th>
+            <th>Fast</th>
+            <th>Status</th>
+            <th>Time</th>
+        </tr>
+
+        {% for row in records %}
+        <tr>
+            <td>{{ row[0] }}</td>
+            <td>{{ row[1] }}</td>
+            <td>{{ row[2] }}</td>
+            <td>{{ row[3] }}</td>
+            <td>{{ row[4] }}</td>
+            <td>{{ row[5] }}</td>
+            <td>{{ row[6] }}</td>
+            <td>{{ row[7] }}</td>
+            <td>{{ row[8] }}</td>
+            <td>{{ row[9] }}</td>
+            <td>{{ row[10] }}</td>
+            <td>{{ row[11] }}</td>
+            <td>{{ row[12] }}</td>
+
+            <!-- Wage Category Fix -->
+            <td>
+                {% if row[13] == 0 %}
+                    Low
+                {% elif row[13] == 1 %}
+                    Medium
+                {% elif row[13] == 2 %}
+                    High
+                {% else %}
+                    Very High
+                {% endif %}
+            </td>
+
+            <td>{{ row[14] }}</td>
+
+            <td class="{% if row[15] == 'Approved' %}approved{% else %}denied{% endif %}">
+                {{ row[15] }}
+            </td>
+
+            <td>{{ row[16] }} days</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+<a class="back-btn" href="/">Back</a>
+
+</body>
+</html>

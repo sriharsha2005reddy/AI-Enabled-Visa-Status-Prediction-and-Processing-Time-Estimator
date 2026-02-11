@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Visa Prediction</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <!-- ⭐ NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-logo">VisaPredict AI</div>
+        <div>
+            <a href="/" class="nav-link">Home</a>
+            <a href="/history" class="nav-link">History</a>
+        </div>
+    </nav>
+
+    <!-- ⭐ HERO SECTION -->
+    <section class="hero">
+        <h1>AI Visa Prediction & Processing Time Estimator</h1>
+        <p>Enter your details to instantly predict visa approval chance and estimated processing time.</p>
+    </section>
+
+    <!-- ⭐ MAIN FORM CARD -->
+    <form id="visaForm" class="form-card">
+
+        <h2 class="form-title">Enter Applicant & Job Details</h2>
+
+        <div class="form-grid">
+
+            <div class="input-box">
+                <label>🌍 Continent</label>
+                <select name="continent" required>
+                    <option>Asia</option>
+                    <option>Europe</option>
+                    <option>North America</option>
+                    <option>South America</option>
+                    <option>Africa</option>
+                    <option>Oceania</option>
+                </select>
+            </div>
+
+            <div class="input-box">
+                <label>🎓 Education</label>
+                <select name="education_of_employee" required>
+                    <option>High School</option>
+                    <option>Associate Degree</option>
+                    <option>Bachelor's Degree</option>
+                    <option>Master's Degree</option>
+                    <option>PhD</option>
+                </select>
+            </div>
+
+            <div class="input-box">
+                <label>👨‍💼 Job Experience</label>
+                <select name="has_job_experience" required>
+                    <option>No Experience</option>
+                    <option>Has Experience</option>
+                </select>
+            </div>
+
+            <div class="input-box">
+                <label>📘 Job Training Required?</label>
+                <select name="requires_job_training" required>
+                    <option>No</option>
+                    <option>Yes</option>
+                </select>
+            </div>
+
+            <div class="input-box">
+                <label>🏢 No. of Employees</label>
+                <input type="number" name="no_of_employees" placeholder="300" required>
+            </div>
+
+            <div class="input-box">
+                <label>📅 Year of Establishment</label>
+                <input type="number" name="yr_of_estab" placeholder="2005" required>
+            </div>
+
+            <div class="input-box">
+                <label>🗺 Region</label>
+                <select name="region_of_employment" required>
+                    <option>Northeast</option>
+                    <option>Midwest</option>
+                    <option>South</option>
+                    <option>West</option>
+                    <option>Pacific</option>
+                    <option>Other</option>
+                </select>
+            </div>
+
+            <div class="input-box">
+                <label>💰 Prevailing Wage</label>
+                <input type="number" name="prevailing_wage" placeholder="60000" required>
+            </div>
+
+            <div class="input-box">
+                <label>⏳ Wage Unit</label>
+                <select name="unit_of_wage" required>
+                    <option>Hourly</option>
+                    <option>Weekly</option>
+                    <option>Monthly</option>
+                    <option>Yearly</option>
+                </select>
+            </div>
+
+            <div class="input-box">
+                <label>🧑‍💻 Position Type</label>
+                <select name="full_time_position" required>
+                    <option>Full-Time</option>
+                    <option>Part-Time</option>
+                </select>
+            </div>
+
+            <div class="input-box">
+                <label>⚡ Fast Processing</label>
+                <select name="fast_processing" required>
+                    <option>No</option>
+                    <option>Yes</option>
+                </select>
+            </div>
+
+        </div>
+
+        <div class="btn-container">
+            <button type="submit" class="predict-btn">Predict</button>
+        </div>
+
+    </form>
+
+    <!-- ⭐ POPUP RESULT -->
+    <div id="resultPopup" class="popup">
+        <div class="popup-card">
+            <h2 id="popupStatus"></h2>
+            <p id="popupTime"></p>
+
+            <button id="whyBtn" class="why-btn">Why?</button>
+            <button id="closePopup" class="close-btn">Close</button>
+        </div>
+    </div>
+
+    <!-- ⭐ POPUP FOR WHY -->
+    <div id="whyPopup" class="popup">
+        <div class="popup-card">
+            <h2>Explanation</h2>
+            <p id="popupReason"></p>
+            <button id="closeWhy" class="close-btn">Close</button>
+        </div>
+    </div>
+
+<script src="/static/script.js"></script>
+</body>
+</html>
