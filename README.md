@@ -37,8 +37,7 @@ This application uses Render free tier hosting. Initial load may take
 30–60 seconds due to server sleep.
 
 👤 Author:
-Sriharsha Singireddy
-
+Singireddy Sriharsha
 
 🛠 Tech Stack:
 Python, Flask, Machine Learning (Scikit-learn), HTML, CSS, Git, GitHub, Render
