@@ -1,8 +1,9 @@
 services:
   - type: web
-    name: visa-predictor
+    name: visa-predict-ai
     env: python
+    region: oregon
+    plan: free
     buildCommand: ""
     startCommand: gunicorn app:app
-    plan: free
     autoDeploy: true
