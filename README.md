@@ -19,7 +19,7 @@ platform.
 https://ai-enabled-visa-status-prediction-and-k019.onrender.com
 
 🛠 Tech Stack:
-Python, Flask, Machine Learning (Scikit-learn), HTML, CSS, Git, GitHub, Render
+Python, Flask, Machine Learning (Scikit-learn), HTML, CSS, JS, Git, GitHub, Render
 
 ✨ Features:
 Visa approval prediction using ML model, real-time results, responsive web
