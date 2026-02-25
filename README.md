@@ -1,12 +1,4 @@
-# AI-Enabled Visa Status Prediction System
 
-This is a web-based machine learning application that predicts visa approval
-status based on user-provided details. The application is built using Python
-and Flask, provides a simple and user-friendly interface, and displays
-real-time prediction results. The project is deployed on Render cloud
-platform.
-
-🔗 Live Demo:
 # AI-Enabled Visa Status Prediction System
 
 This is a web-based machine learning application that predicts visa approval
